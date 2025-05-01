@@ -1,1 +1,44 @@
-<div class='home'><h1>Welcome to AC & Co.</h1><img src='{{ 'ac-logo-rotating.svg' | asset_url }}'></div>
+<section class="hero" style="background: #f8f8f8; padding: 60px 0; text-align: center;">
+  <div class="container">
+    <div class="logo-animation">
+      <img src="{{ 'ac-logo-rotating.svg' | asset_url }}" alt="AC & Co. Rotating Logo" style="width: 120px; animation: spin 6s linear infinite;">
+    </div>
+    <h1 class="headline" style="margin-top: 20px; font-size: 2rem; font-weight: 600; color: #333;">Where Elegance Meets Attitude</h1>
+    <p class="subtext" style="color: #777; max-width: 600px; margin: 10px auto 0;">Luxury jewelry designed to elevate your look — gold, gold-plated, and stainless steel pieces made to shine.</p>
+  </div>
+</section>
+
+<style>
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
+
+<section class="categories" style="padding: 40px 0;">
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    <div class="category" style="flex: 1 1 200px; max-width: 300px; text-align: center;">
+      <a href="/collections/men-gold"><img src="{{ 'men-gold.jpg' | asset_url }}" alt="Men's Gold" style="width: 100%; border-radius: 10px;"></a>
+      <h3 style="margin-top: 10px;">Men's Gold</h3>
+    </div>
+    <div class="category" style="flex: 1 1 200px; max-width: 300px; text-align: center;">
+      <a href="/collections/men-plated"><img src="{{ 'men-plated.jpg' | asset_url }}" alt="Men's Gold-Plated" style="width: 100%; border-radius: 10px;"></a>
+      <h3 style="margin-top: 10px;">Men's Gold-Plated</h3>
+    </div>
+    <div class="category" style="flex: 1 1 200px; max-width: 300px; text-align: center;">
+      <a href="/collections/men-steel"><img src="{{ 'men-steel.jpg' | asset_url }}" alt="Men's Stainless Steel" style="width: 100%; border-radius: 10px;"></a>
+      <h3 style="margin-top: 10px;">Men's Stainless Steel</h3>
+    </div>
+    <div class="category" style="flex: 1 1 200px; max-width: 300px; text-align: center;">
+      <a href="/collections/women-plated"><img src="{{ 'women-plated.jpg' | asset_url }}" alt="Women's Gold-Plated" style="width: 100%; border-radius: 10px;"></a>
+      <h3 style="margin-top: 10px;">Women's Gold-Plated</h3>
+    </div>
+  </div>
+</section>
+
+<section class="featured" style="background: #fff; padding: 60px 0; text-align: center;">
+  <div class="container">
+    <h2 style="font-size: 1.8rem; margin-bottom: 30px;">Featured Pieces</h2>
+    {% section 'featured-collection' %}
+  </div>
+</section>
